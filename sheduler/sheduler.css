@@ -1,0 +1,653 @@
+.calendar {
+
+}
+
+.month {
+
+}
+
+.day {
+    width: 1274px;
+    height: 610px;
+}
+
+.week {
+
+}
+
+.month__content {
+    /*display: grid;*/
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    max-height: 624px;
+    overflow: auto;
+    background-color: #fff;
+    /*grid-gap: 1px;*/
+}
+
+.day__content {
+    /*display: grid;*/
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 624px;
+    width: 100%;
+    overflow: scroll;
+    max-width: 1260px;
+}
+
+.header_week_content {
+    /*display: inline-grid;*/
+    grid-template-columns:89px repeat(7, 1fr);
+    background-color: #fff;
+    height: 82px;
+    width: 1254px;
+    display: flex;
+}
+
+
+.month_date {
+    width: 179px;
+    /*height: 114px;*/
+    height: 97px;
+    border: 1px solid #D6DADD;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.month__date_accent {
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 23, 41, 0.75);
+    height: 41px;
+    border: 1px solid #D6DADD;
+}
+
+.another_month {
+    opacity: .5;
+}
+
+.week_day_name {
+    padding: 11px 15px;
+}
+
+.date_num {
+    width: 27px;
+    height: 24px;
+    border-radius: 17px;
+    display: flex;
+    justify-content: center;
+    margin: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    align-items: center;
+}
+
+.date_num__active {
+    background-color: #D0E9FF;
+    color: #167FFB;
+}
+
+.date_event {
+    display: flex;
+    align-items: center;
+}
+
+.time_event {
+    display: flex;
+    height: 64px;
+    background-color: #D0E9FF;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 8px;
+    border-left: 4px solid #1492FF;
+    margin: 1px 0;
+}
+
+.noPlaces {
+    background-color: #FFEAEA;
+    border-left: 4px solid #FF7A7A;
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+.noPlacesDay {
+    background-color: #E5E8EA;
+    border-left: 4px solid #B3B9BF;
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+
+.fewPlaces {
+    background-color: #FFE9BF;
+    border-left: 4px solid #FF8B0F;
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+
+.manyPlaces {
+    background-color: #D8FBDB;
+    border-left: 4px solid #0D932B;
+    padding-top: 10px;
+    justify-content: flex-start;
+}
+
+.event_count_users {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #167FFB;
+}
+
+.no_event {
+    display: none;
+}
+
+.events_container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-top: 27px;
+    white-space: pre;
+    max-width: 135px;
+}
+
+.events_container::-webkit-scrollbar {
+    width: 0;
+}
+
+.events_container_view_week {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-top: 27px;
+    white-space: pre;
+    border-radius: 4px;
+}
+
+.event_title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #001729
+}
+
+.event_title_week {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #001729
+}
+
+.comment {
+    color: #ADB0B2;
+}
+
+.event_status {
+    min-width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #1492FF;
+    margin-right: 4px;
+}
+
+.hours {
+    width: 99px;
+}
+
+.hour_cell {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 99px;
+    height: 66px;
+    background-color: #fff;
+}
+
+.hour_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #001729;
+    transform: translate(15px, -62px);
+}
+
+.hour_title_no_active {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #001729;
+    transform: translate(15px, -62px);
+    opacity: .5;
+}
+
+.hour_date_correct {
+    padding-left: 25px;
+}
+
+.dis {
+    opacity: .5;
+    width: 99px;
+}
+
+.hour_border {
+    border-bottom: 1px solid #D6DADD;
+    width: 14px;
+}
+
+.content_tab {
+    display: flex;
+    max-width: 1274px;
+    max-height: 624px;
+    overflow: auto;
+}
+
+
+.content_tab::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content_tab::-webkit-scrollbar-thumb {
+    background: rgba(0, 23, 41, 0.12);
+    border-radius: 100px;
+}
+
+.content_tab::-webkit-scrollbar-track {
+    background: rgba(0, 23, 41, 0.04);
+    border-radius: 100px;
+}
+
+.content_day_tab {
+    display: flex;
+    max-width: 1274px;
+    max-height: 624px;
+}
+.day__content::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.day__content::-webkit-scrollbar-thumb {
+    background: rgba(0, 23, 41, 0.12);
+    border-radius: 100px;
+    transform: translate(15px 15px);
+}
+
+.day__content::-webkit-scrollbar-track {
+    background: rgba(0, 23, 41, 0.04);
+    border-radius: 100px;
+}
+.day__content::-webkit-scrollbar-corner { background: rgb(228 230 232); }
+
+.week_date {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 23, 41, 0.75);
+    border: .5px solid #D6DADD;
+    align-items: center;
+    max-width: 165px;
+}
+
+.day_date {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 23, 41, 0.75);
+    width: 89px;
+    height: 82px;
+}
+
+.week_current_date {
+    width: 30px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+}
+
+.day_current_date {
+    width: 30px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.accent {
+    background-color: #167FFB;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.view_week_day_name {
+    width: 165px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 16px 16px 4px;
+    color: #001729;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.view_day_day_name {
+    height: 19px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 16px 16px 4px;
+    color: #001729;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.hours_days {
+    display: flex;
+}
+
+.week_date_hours {
+    width: 165px;
+    height: 66px;
+    border: 1px solid #D6DADD;
+    border-top: none;
+    background-color: #fff;
+    margin-top: -27px;
+    cursor: pointer;
+}
+
+.week_date_hours_hour_no_active {
+    background-color: #F2F4F4;
+    width: 165px;
+    height: 66px;
+    border: 1px solid #D6DADD;
+    border-top: none;
+    margin-top: -27px;
+}
+
+.day_date_hours {
+    width: 100%;
+    height: 66px;
+    border-bottom: 1px solid #D6DADD;
+    border-top: none;
+    background-color: #fff;
+    margin-top: -27px;
+    cursor: pointer;
+}
+
+.day_date_hours_hour_no_active {
+    width: 100%;
+    height: 66px;
+    border-bottom: 1px solid #D6DADD;
+    border-top: none;
+    background-color: #F2F4F4;
+    margin-top: -27px;
+}
+
+.week_date_hours_event {
+    width: 165px;
+    height: 66px;
+    border: 1px solid #D6DADD;
+    border-top: none;
+    background-color: #fff;
+    margin-top: -27px;
+}
+
+.user_img {
+    width: 11px;
+    height: 11px;
+    margin-right: 7px;
+}
+
+.prev_btn {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background: url(../icons/arrow_to_left.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    border: none;
+}
+
+.next_btn {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    background: url(../icons/arrow_to_right.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    border: none;
+}
+
+.current_hour {
+    transform: translateY(20px);
+    z-index: 1;
+    top: 45px;
+    height: 0;
+    color: #1492ff;
+    padding-left: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+}
+
+.time_line_block {
+    position: relative
+}
+
+/*.current_hour_day{
+    position: absolute;
+    transform: translate(90px, 32px);
+    height: 1px;
+    background-color: #FF4545;
+}*/
+
+.current_hour_current_day {
+    transform: translate(85px, 25px);
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #1492ff;
+}
+
+/*.current_hour_current_day_line{
+    position: absolute;
+    width: 165px;
+    height: 2px;
+    background-color: #FF4545;
+}*/
+
+.header_day {
+    display: flex;
+    width: 1300px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.training_class {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 12px 0 9px 12px;
+}
+
+.training_class_name_block {
+    display: flex;
+    width: 200px;
+}
+
+.training_class_title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 23, 41, 0.5);
+}
+
+.training_class_name {
+    background-color: #D0E9FF;
+    border-radius: 20px;
+    padding: 1px 10px;
+    margin-right: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #112542;
+    width: 200px;
+}
+
+.day_tab {
+    width: 200px;
+    /*width: 1155px;*/
+}
+.day_tab_width_all {
+    width: 1155px;
+}
+
+.today_btn {
+    cursor: pointer;
+    border: 2px solid #167FFB;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 4px;
+    width: 93px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #167FFB;
+}
+
+.month_btn {
+    cursor: pointer;
+}
+
+.month_date_picker {
+    transform: translate(367px, 30px);
+    position: fixed;
+    /*z-index: -2;*/
+}
+
+.date_date_picker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    cursor:pointer;
+}
+
+.date_date_picker.current_date {
+    background-color: #167FFB;
+    border-radius: 100px;
+    color: #fff;
+}
+
+.date_date_picker_dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: .5;
+}
+
+.month_date_date_picker {
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgba(0, 23, 41, 0.5);
+    height: 36px;
+    width: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+.month_date_picker_content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 8px 16px;
+    transform: translate(-40px, 10px);
+}
+.date_picker_cells{
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    max-height: 624px;
+    overflow: auto;
+
+}
+.button_group_date_picker{
+    display: flex;
+}
+.day_tab_container{
+    display:flex;
+}
+/*
+
+.day_content{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 624px;
+    width: 100%;
+!*    width: 1254px;
+    height: 610px;*!
+}*/

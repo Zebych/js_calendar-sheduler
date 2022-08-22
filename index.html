@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./sheduler/sheduler.css">
+    <link href="fonts/stylesheet.css" rel="stylesheet" type="text/css"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="./input_fields/selectors/selectors.css">
+    <link rel="stylesheet" href="./input_fields/checkbox/checkbox.css">
+
+    <link rel="stylesheet" href="./input_fields/date_input/input_date.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./input_fields/selectors/selectors.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header_calendar">
+        <div class="filter_container">
+            <div class="title_container">
+                <div class="header_title_block">
+                    <button type="button" class="button_exit"></button>
+                    <h2 class="header_title">Бронирование компьютерных классов</h2>
+                </div>
+                <div class="all_classes_block">
+                    <button class="admin_btn">Отчетность</button>
+                </div>
+            </div>
+
+            <form class="form-selectors" action="javascript:void(0);">
+                <div class="select_block">
+                    <div class="form-group select2Part select2multiple w-100 floating-group">
+                        <label class="floating-label">Город</label>
+                        <select name="" id="floating-select"
+                                class="form-control customSelectMultiple floating-control"
+                                multiple>
+                        </select>
+                    </div>
+                </div>
+                <div class="select_block">
+                    <div class="form-group select2Part select2multiple w-100 floating-group">
+                        <label class="floating-label">Учебный класс</label>
+                        <select name="" id="select_classes"
+                                class="form-control customSelectMultiple floating-control"
+                                multiple>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group floating-group form_date" id="calendar_input">
+                    <label class="floating-label">Дата</label>
+                    <input id="input_date_picket"
+                           class="form-control-date floating-control"
+                           data-provide="datepicker"
+                           name="date" type="text" style="width: 204px"/>
+                    <div id="date_picker" class="date_picker">
+                        <div class="month_date_picker_content ">
+                            <div class="button_group_date_picker">
+
+                                <div class="select_date_date_picker_value select-date-picker-block ">
+                                    <div class="control_date_picker">
+                                        <button id="prev_date_picker_btn"
+                                                class="prev_date_picker_btn"></button>
+                                        <div>
+                                            <select id="select_date_date_picker_value"
+                                                    class="select_date_picker"
+                                                    style="border: none;">
+                                            </select></div>
+                                        <button id="next_date_picker_btn"
+                                                class="next_date_picker_btn"></button>
+                                    </div>
+                                    <div id="month_block_picker"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <input class="custom-checkbox" type="checkbox" id="checked_my"
+                           name="checked_free" checked onclick="checkAddress(this)">
+                    <label for="checked_my"> <span
+                            class="checkbox_title">Только мои</span></label>
+                </div>
+                <div class="checkbox">
+                    <input class="custom-checkbox" type="checkbox" id="checked_free"
+                           name="checked_free" onclick="checkAddress(this)">
+                    <label for="checked_free"><span
+                            class="checkbox_title">Свободные</span></label>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="btn_group">
+            <div class="header_status_container">
+                <div class="today_button">
+                    <button id="today_btn" class="today_btn">Сегодня</button>
+                    <button class="admin_btn">Все классы</button>
+                </div>
+
+                <div class="calendar_status_block">
+                    <div class="calendar_type">
+                        <button class="nav-tabs" id="day_btn">День</button>
+                        <button class="nav-tabs active" id="week_btn">Неделя</button>
+                        <button class="nav-tabs " id="month_btn">Месяц</button>
+                    </div>
+
+                    <div class="button_group_next">
+                        <button id="prev_btn" class="prev_btn"></button>
+
+                        <div class="select_date_value select-icon "
+                             style="margin-bottom: 15px;">
+                            <select id="select_date_value" class="select_month">
+                            </select>
+                        </div>
+                        
+                        <button id="next_btn" class="next_btn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="calendar" class="calendar"></div>
+
+</div>
+
+<script src="./sheduler/sheduler.js"></script>
+<script src="./input_fields/selectors/selectors.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "PT Root UI", serif;
+    font-style: normal;
+}
+
+
+.wrapper {
+    /*padding: 120px 0 0 507px;*/
+    /*max-width: 700px;*/
+    width: 1920px;
+    height: 940px;
+    margin: 0;
+    background: #EDEEEF;
+}
+
+.body_wrapper {
+    padding: 120px 0 0 507px;
+    max-width: 700px;
+}
+
+/*header calendar*/
+.header_calendar {
+    width: 1254px;
+    padding: 0 0 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status_container {
+    display: flex;
+}
+
+.header_status_container {
+    padding-top: 16px;
+    display: flex;
+}
+
+.today_button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    padding-right: 10px;
+    margin-bottom: -2px;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    padding-top: 5px;
+}
+
+.calendar_status_block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 232px;
+    height: 102px;
+}
+.calendar_type{
+    display: flex;
+}
+.nav-tabs{
+    border: none;
+    border-bottom: 1px solid #D6DADD;
+    text-transform: none;
+    width: 77px;
+    height: 46px;
+    padding: 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.active {
+    border-color: #EDEEEF #EDEEEF #167FFB !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    background-color: #EDEEEF !important;
+}
+.btn_group{
+    display: flex;
+    align-items: flex-end;
+}
+.nav-tabs .nav-link.active {
+    background-color: #EDEEEF;
+}
+
+.btn {
+    padding: 5px !important;
+}
+
+/*.btn-link:active .btn-link:active:focus{
+
+}*/
+.btn-check:focus + .btn, .btn:focus {
+    box-shadow: 0 0 0 .1rem #d4d5d6 !important;
+}
+
+.btn-outline-primary {
+    text-transform: none;
+    color: #167FFB;
+    border-color: #167FFB;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*modal*/
+.modal-dialog {
+    height: 100%;
+}
+
+.modal-content {
+    padding: 48px;
+}
+
+
+.modalDay {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*modal info event*/
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.desc-title {
+    color: rgba(0, 23, 41, 0.5);
+}
+
+.desc-title-block {
+    padding-bottom: 6px;
+}
+
+.modal-info-container {
+    display: flex;
+    padding-top: 30px;
+}
+
+.modal-info-block {
+    width: 144px;
+    height: 42px;
+}
+
+.user-block {
+    padding: 16px 0;
+}
+
+.desk-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 232px;
+    border-radius: 16px;
+    background: #D0E9FF;
+}
+
+.btn-close-block {
+    padding-right: 6px;
+}
+
+.modal_footer {
+    display: flex;
+}
+
+/*modal cancel event*/
+.form-outline-block {
+    padding-top: 24px;
+}
+
+.send_comment_block {
+    padding-top: 16px;
+}
+
+.success_message {
+    font-size: 24px;
+    color: #167FFB;
+}
+
+.booking_added_message {
+    font-size: 24px;
+    color: #2ABA4A;
+}
+
+/*select */
+
+.form-selectors {
+    display: flex;
+    align-items: center;
+}
+
+.form-added-booking {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select2-container--default .select2-results__option[role=group] {
+    color: #ADB0B2 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding-left: 6px !important;
+}
+
+.select2-container--default .select2-results__option[role=group]:before {
+    content: none !important;
+}
+
+.select2-container--default .select2-results__option .select2-results__option {
+    padding-left: 6px !important;
+}
+
+.filter_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.checkbox_title {
+    margin-right: 15px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.button_group_next {
+    display: flex;
+    width: 232px;
+    height: 40px;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.select_date_value {
+    border: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #001729;
+    padding-right: 17px;
+    text-align: center;
+}
+
+
+.added-entry-field-width {
+width: 296px;
+}
+
+.added-entry-field-block {
+display: flex;
+justify-content: space-between;
+width: 100%;
+padding: 16px 0;
+}
+
+.comment_booking {
+width: 100%;
+height: 80px;
+}
+
+.added-modal-button-group {
+display: flex;
+padding-top: 16px;
+}
+
+.cancel_booking {
+display: flex;
+}
+
+.icon {
+width: 25px;
+margin: 5px 8px 14px;
+}
+
+.btn-close-blue {
+background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300f'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
+}
+
+.button_cancel {
+padding-left: 24px;
+}
+
+.button_group {
+display: flex;
+padding-top: 24px;
+}
+
+.header_title_block {
+display: flex;
+padding-bottom: 32px;
+align-items: center;
+}
+
+.header_title {
+font-weight: 700;
+font-size: 32px;
+padding-left: 24px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+color: #616161;
+}
+.control_date_picker{
+    display: flex;
+    justify-content: space-between;
+}
+.button_exit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #167FFB;
+    border-radius: 4px;
+    background: url(../icons/arrow_to_left_blue.png);
+    background-position: -2px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+.admin_btn{
+    align-items: center;
+    gap: 4px;
+    width: 116px;
+    background: #D0E9FF;
+    border-radius: 4px;
+    height: 40px;
+    border: none;
+    color: #167FFB;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
+.title_container{
+    display: flex;
+    justify-content: space-between;
+    width: 884px;
+}
+.all_classes_block{
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 17px;
+}
+.classes_block{
+    display: flex;
+}
+.select_block{
+    width: 204px
+}
+
+
+
